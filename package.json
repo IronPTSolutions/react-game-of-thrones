@@ -1,5 +1,6 @@
 {
   "name": "react-game-of-thrones",
+  "homepage": "https://ironptsolutions.github.io/react-game-of-thrones",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
