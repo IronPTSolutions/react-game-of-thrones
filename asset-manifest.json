@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.d498bfb3.chunk.css",
-    "main.js": "/static/js/main.30a5f7be.chunk.js",
-    "main.js.map": "/static/js/main.30a5f7be.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.5dd60c9c.chunk.css": "/static/css/2.5dd60c9c.chunk.css",
-    "static/js/2.45b3a97c.chunk.js": "/static/js/2.45b3a97c.chunk.js",
-    "static/js/2.45b3a97c.chunk.js.map": "/static/js/2.45b3a97c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.0203c8239c2e64019964da7d18eae6e0.js": "/precache-manifest.0203c8239c2e64019964da7d18eae6e0.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.5dd60c9c.chunk.css.map": "/static/css/2.5dd60c9c.chunk.css.map",
-    "static/css/main.d498bfb3.chunk.css.map": "/static/css/main.d498bfb3.chunk.css.map",
-    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/react-game-of-thrones/static/css/main.d498bfb3.chunk.css",
+    "main.js": "/react-game-of-thrones/static/js/main.30a5f7be.chunk.js",
+    "main.js.map": "/react-game-of-thrones/static/js/main.30a5f7be.chunk.js.map",
+    "runtime~main.js": "/react-game-of-thrones/static/js/runtime~main.e8603197.js",
+    "runtime~main.js.map": "/react-game-of-thrones/static/js/runtime~main.e8603197.js.map",
+    "static/css/2.730abb51.chunk.css": "/react-game-of-thrones/static/css/2.730abb51.chunk.css",
+    "static/js/2.45b3a97c.chunk.js": "/react-game-of-thrones/static/js/2.45b3a97c.chunk.js",
+    "static/js/2.45b3a97c.chunk.js.map": "/react-game-of-thrones/static/js/2.45b3a97c.chunk.js.map",
+    "index.html": "/react-game-of-thrones/index.html",
+    "precache-manifest.b415ffb36d7e5d2467a06ea4fab07ef3.js": "/react-game-of-thrones/precache-manifest.b415ffb36d7e5d2467a06ea4fab07ef3.js",
+    "service-worker.js": "/react-game-of-thrones/service-worker.js",
+    "static/css/2.730abb51.chunk.css.map": "/react-game-of-thrones/static/css/2.730abb51.chunk.css.map",
+    "static/css/main.d498bfb3.chunk.css.map": "/react-game-of-thrones/static/css/main.d498bfb3.chunk.css.map",
+    "static/media/font-awesome.min.css": "/react-game-of-thrones/static/media/fontawesome-webfont.fee66e71.woff"
   }
 }
