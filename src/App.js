@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/misc/Header';
+import EpisodesList from './components/EpisodesList';
+import Favourites from './components/Favourites';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <main className="container">
+        <div className="row">
+          <div className="col-9 p-4 bg-light border-right rounded">
+            <EpisodesList/>
+          </div>
+
+          <div className="col-3 p-4">
+            <Favourites/>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
