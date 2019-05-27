@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import FilterSeason from './FilterSeason';
-import EpisodesList from './EpisodesList';
-import Favourites from './Favourites';
-import SearchBar from './SearchBar';
+import FilterSeason from '../components/FilterSeason';
+import EpisodesList from '../components/EpisodesList';
+import Favourites from '../components/Favourites';
+import SearchBar from '../components/SearchBar';
 import episodes from '../data/episodes.json'
 
 

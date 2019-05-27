@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Episode extends React.Component {
   state = {
@@ -10,7 +11,7 @@ class Episode extends React.Component {
   }
 
   render() {
-    const { episode, isFavourite } = this.props
+    const { episode, isFavourite } = this.props
     
     const summaryLong = episode.summary.replace(/<p>/g, '').replace(/<\/p>/g, '')
     const summaryShort = summaryLong.slice(0, 50)
@@ -25,7 +26,7 @@ class Episode extends React.Component {
 
     return (
       <div className="Episode card">
-        <img src={episode.image.medium} className="card-img-top" alt="..." />
+        <Link to={`/episodes/${episode.id}`}><img src={episode.image.medium} className="card-img-top" alt="..." /></Link>
           <div className="card-body">
             <h5 className="card-title">{episode.name}</h5>
             <h6 className="card-title">S0{episode.season} E{episode.number}</h6>
