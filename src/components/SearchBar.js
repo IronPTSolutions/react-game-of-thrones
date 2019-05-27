@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { queryString } from 'query-string';
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
   state = {
-    searchText: '',
+    searchText: this.props.querySearch.name || '',
     error: true,
     touch: false
   }
@@ -34,7 +35,13 @@ class SearchBar extends React.Component {
 
     this.props.onSearch(this.state.searchText)
   }
-  
+
+  componentDidMount() {
+    const { searchText } = this.state;
+    if (searchText) {
+      this.props.onSearch(searchText)
+    }
+  }
 
   render() {
     return (

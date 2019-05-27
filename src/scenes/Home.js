@@ -4,6 +4,7 @@ import EpisodesList from '../components/EpisodesList';
 import Favourites from '../components/Favourites';
 import SearchBar from '../components/SearchBar';
 import episodes from '../data/episodes.json'
+import queryString from 'query-string'; 
 
 
 class Home extends Component {
@@ -34,10 +35,12 @@ class Home extends Component {
       return this.state.season === null || Number(this.state.season) === e.season
     })
 
+    const querySearch = queryString.parse(this.props.location.search)
+
     return (
       <Fragment>
         <FilterSeason onFilterSeason={this.filterSeason} />
-        <SearchBar onSearch={this.handleSearchEpisodes} />
+        <SearchBar onSearch={this.handleSearchEpisodes} querySearch={querySearch}/>
 
         <div className="row">
           <div className="col-9 p-4 bg-light border-right rounded">
