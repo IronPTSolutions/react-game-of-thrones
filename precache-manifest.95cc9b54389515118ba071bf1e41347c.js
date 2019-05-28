@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fa8a6b4933aaa8bde40dbb3f58f34e2",
+    "revision": "1927aeceddd85420ea2bcd2327f9a989",
     "url": "/react-game-of-thrones/index.html"
   },
   {
-    "revision": "8cbcdbb4dd4d5d2ba8d4",
+    "revision": "23636e0057e59e29fbbf",
     "url": "/react-game-of-thrones/static/css/2.730abb51.chunk.css"
   },
   {
-    "revision": "85d1042b97598844b438",
+    "revision": "c65ce46079fde13d42cd",
     "url": "/react-game-of-thrones/static/css/main.d498bfb3.chunk.css"
   },
   {
-    "revision": "8cbcdbb4dd4d5d2ba8d4",
-    "url": "/react-game-of-thrones/static/js/2.45b3a97c.chunk.js"
+    "revision": "23636e0057e59e29fbbf",
+    "url": "/react-game-of-thrones/static/js/2.46d78b00.chunk.js"
   },
   {
-    "revision": "85d1042b97598844b438",
-    "url": "/react-game-of-thrones/static/js/main.30a5f7be.chunk.js"
+    "revision": "c65ce46079fde13d42cd",
+    "url": "/react-game-of-thrones/static/js/main.aefaaa9a.chunk.js"
   },
   {
     "revision": "98e4409f42b8f37c8c85",
