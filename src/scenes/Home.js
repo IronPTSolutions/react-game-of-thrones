@@ -3,15 +3,16 @@ import FilterSeason from '../components/FilterSeason';
 import EpisodesList from '../components/EpisodesList';
 import Favourites from '../components/Favourites';
 import SearchBar from '../components/SearchBar';
-import episodes from '../data/episodes.json'
-import queryString from 'query-string'; 
+import queryString from 'query-string';
+import GotService from '../services/GotService';
 
 
 class Home extends Component {
   state = {
     season: null,
     favouriteEpisodes: [],
-    searchEpisodes: [...episodes]
+    episodes: [],
+    searchEpisodes: []
   }
 
   addToFavourite = (episode) => {
@@ -26,8 +27,16 @@ class Home extends Component {
 
   handleSearchEpisodes = (text) => {
     this.setState({
-      searchEpisodes: episodes.filter(e => e.name.toLowerCase().includes(text.toLowerCase()))
+      searchEpisodes: this.state.episodes.filter(e => e.name.toLowerCase().includes(text.toLowerCase()))
     })
+  }
+
+  componentDidMount() {
+    GotService.listEpisodes()
+      .then(
+        episodes => this.setState({ episodes: episodes, searchEpisodes: episodes }),
+        error => console.error(error)
+      )
   }
 
   render() {
