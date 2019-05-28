@@ -7,6 +7,10 @@ const http = axios.create({
 const listEpisodes = () => http.get('/episodes')
   .then(res => res.data)
 
+const getEpisode = (id) => http.get(`/episodes/${id}`)
+  .then(res => res.data)
+
 export default {
-  listEpisodes
+  listEpisodes,
+  getEpisode
 }

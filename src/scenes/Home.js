@@ -6,7 +6,6 @@ import SearchBar from '../components/SearchBar';
 import queryString from 'query-string';
 import GotService from '../services/GotService';
 
-
 class Home extends Component {
   state = {
     season: null,

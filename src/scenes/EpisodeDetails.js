@@ -1,29 +1,38 @@
 import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
-import episodes from '../data/episodes.json'
+import { Link, Redirect } from 'react-router-dom'
+import GotService from '../services/GotService'
 
 class EpisodeDetails extends Component {
   state = {
-    episode: {}
+    episode: {},
+    shouldRedirect: false
   }
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    console.log(id);
-    const episode = episodes.find(episode => episode.id === Number(id));
-    this.setState({ episode })
+    GotService.getEpisode(id)
+      .then(
+        episode => this.setState({ episode }),
+        error => {
+          console.error(error);
+          if (error.response && error.response.status === 404) {
+            this.setState({ shouldRedirect: true })
+          }
+        }
+      )
   }
 
   render() {
-    console.log(this.state.episode);
-    const { episode } = this.state;
+    const { episode, shouldRedirect } = this.state;
     const summary = episode.summary ? episode.summary.replace(/<p>/g, '').replace(/<\/p>/g, '') : '';
-    const image = episode.image ? episode.image.original : 'https://via.placeholder.com/350x150';
-    return (
+    const image = episode.image ? episode.image.original : this.props.defaultImage;
+    return shouldRedirect ? 
+      (<Redirect to="/" />) : 
+      (
       <Fragment>
         <div className="row mb-3">
           <div className="col-xs-12 col-sm-4">
-            <img src={image} class="img-fluid" alt={episode.name} />
+            <img src={image} className="img-fluid" alt={episode.name} />
           </div>
           <div className="col-xs-12 col-sm-8">
             <h1>{ episode.name }</h1>
@@ -36,8 +45,12 @@ class EpisodeDetails extends Component {
           </div>
         </div>
       </Fragment>
-    );
+      );
   }
+}
+
+EpisodeDetails.defaultProps = {
+  defaultImage: 'https://via.placeholder.com/350x197'
 }
 
 export default EpisodeDetails;
